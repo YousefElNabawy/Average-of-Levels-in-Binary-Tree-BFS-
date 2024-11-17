@@ -1,0 +1,24 @@
+To solve this problem, we can process each level of the binary tree using a breadth-first traversal (BFS) approach. We calculate the average of the node values at each level and store it in a result array.
+
+Here’s the step-by-step plan:
+
+1. Use a queue to traverse the tree level by level.
+2. For each level:
+    .Initialize a sum variable to accumulate the values of nodes at that level.
+    .Keep track of the number of nodes at that level.
+3. After processing all nodes at a level, compute the average and add it to the result array.
+4. Continue until all levels are processed.
+
+
+Explanation:
+.queue<TreeNode*> q stores nodes at each level.
+.For each level, we iterate over all nodes at that level, summing and counting their values.
+.We then calculate the average by dividing the sum by the number of nodes at that level and adding it to result.
+
+Complexity Analysis:
+
+Time Complexity: 
+𝑂(𝑛), where 𝑛 is the number of nodes in the tree. We process each node once.
+
+Space Complexity: 
+𝑂(𝑚), where 𝑚 is the maximum number of nodes at any level, for the queue.
