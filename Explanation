@@ -1,24 +1,24 @@
-To solve this problem, we can process each level of the binary tree using a breadth-first traversal (BFS) approach. We calculate the average of the node values at each level and store it in a result array.
+To solve this problem, we can use a Breadth-First Search (BFS) approach to traverse each level of the binary tree. We'll calculate the average value for each level and store it in an array. At each level, we sum up the values of the nodes and then divide by the number of nodes to get the average.
 
-Here’s the step-by-step plan:
-
-1. Use a queue to traverse the tree level by level.
-2. For each level:
-    .Initialize a sum variable to accumulate the values of nodes at that level.
-    .Keep track of the number of nodes at that level.
-3. After processing all nodes at a level, compute the average and add it to the result array.
-4. Continue until all levels are processed.
+Steps:
+    1.Use a queue to traverse the tree level by level.
+    2.For each level, calculate the sum of the node values, divide by the number of nodes at that level to get the average, and store the result.
+    3.After traversing all levels, return the array of averages.
 
 
 Explanation:
-.queue<TreeNode*> q stores nodes at each level.
-.For each level, we iterate over all nodes at that level, summing and counting their values.
-.We then calculate the average by dividing the sum by the number of nodes at that level and adding it to result.
+    1.Queue Initialization: Start by initializing a queue to hold nodes for BFS traversal.
+    2.Level Sum Calculation:
+        .For each level, calculate the sum of all node values and count the number of nodes.
+        .Divide the sum by the number of nodes at the level to compute the average.
+    3.Store Average in Array: Append the average of each level to the averages array.
+    4.Return: After traversing all levels, return the averages array and set returnSize to the number of levels.
 
-Complexity Analysis:
+Complexity:
 
 Time Complexity: 
-𝑂(𝑛), where 𝑛 is the number of nodes in the tree. We process each node once.
+𝑂(𝑛), where is the number of nodes, since we visit each node once.
+
 
 Space Complexity: 
-𝑂(𝑚), where 𝑚 is the maximum number of nodes at any level, for the queue.
+𝑂(𝑚), where 𝑚 is the maximum number of nodes at any level (for the queue and averages array).
