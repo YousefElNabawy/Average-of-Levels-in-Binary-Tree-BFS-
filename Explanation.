@@ -1,4 +1,5 @@
-To solve this problem, we can use a Breadth-First Search (BFS) approach to traverse each level of the binary tree. We'll calculate the average value for each level and store it in an array. At each level, we sum up the values of the nodes and then divide by the number of nodes to get the average.
+To solve this problem, we can use a Breadth-First Search (BFS) approach to traverse each level of the binary tree. We'll calculate the average value for each level and store it in an array.
+At each level, we sum up the values of the nodes and then divide by the number of nodes to get the average.
 
 Steps:
     1.Use a queue to traverse the tree level by level.
